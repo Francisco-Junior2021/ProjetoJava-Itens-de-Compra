@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Lista de Compras</title>
+</head>
+<body>
+  <div id="app">
+    <h1>Lista de Compras</h1>
+    <form id="addItemForm">
+      <label for="barcode">Código de Barra:</label>
+      <input type="text" id="barcode" required>
+      
+      <label for="itemName">Nome do Item:</label>
+      <input type="text" id="itemName" required>
+      
+      <label for="price">Preço:</label>
+      <input type="text" id="price" pattern="\d+(\.\d{1,2})?" step="0.01" required>
+      
+      <button type="submit">Adicionar Item</button>
+    </form>
+
+    <table id="shoppingList">
+      <thead>
+        <tr>
+          <th>Código de Barra</th>
+          <th>Nome do Item</th>
+          <th>Preço</th>
+          <th>Comprado</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="lista.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
+
