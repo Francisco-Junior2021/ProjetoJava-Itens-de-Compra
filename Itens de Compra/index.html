@@ -1,43 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Lista de Compras</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
 </head>
 <body>
-  <div id="app">
-    <h1>Lista de Compras</h1>
-    <form id="addItemForm">
-      <label for="barcode">Código de Barra:</label>
-      <input type="text" id="barcode" required>
-      
-      <label for="itemName">Nome do Item:</label>
-      <input type="text" id="itemName" required>
-      
-      <label for="price">Preço:</label>
-      <input type="text" id="price" pattern="\d+(\.\d{1,2})?" step="0.01" required>
-      
-      <button type="submit">Adicionar Item</button>
-    </form>
+    <h1>Lista de compras</h1>
 
-    <table id="shoppingList">
-      <thead>
-        <tr>
-          <th>Código de Barra</th>
-          <th>Nome do Item</th>
-          <th>Preço</th>
-          <th>Comprado</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
+    <div>
+    
+        <input type="text" id="input-nome" placeholder="Digite o nome do item">
+        <input type="text" id="input-preco" placeholder="Digite o preço">
+        
+        <button id="botao-adicionar">Adicionar</button>
+        
+        <table style="border-style: double;">
+            <tr>
+                <th id="coluna-produto">Produto</th>
+                <th id="coluna-preço">Preço</th>
+                <th id="coluna-comprado">Comprado</th>
+                <th id="coluna-ações">Ações</th>
+            </tr>
+            
+        </table>
+    </div>
+    
+    <br>
 
-  <script src="lista.js"></script>
-  <script src="index.js"></script>
+    <br>
+    <br>
+    
+    <script type="module" src="index.js"></script>
 </body>
 </html>
-
